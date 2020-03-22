@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Paytoll</title>
+
+    <style>
+      
+input[type=text],input[type=date],input[type=time],select{
+    width: 67%;
+    padding: 6px 28px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 9px;
+}
+
+input[type=submit] {
+  width: 25%;
+    background-color: #ec5d30;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div form {
+  background-color: #f2f2f2;
+  border: 1px solid #FF9800;
+    padding: 10px;
+    left: 0;
+    position: absolute;
+    margin: 20px;
+    width: 50%;
+    top: 0;
+}
+
+    .button {
+        background-color:#68787f;
+        border: 1px solid #CDDC39;
+        color: white;
+        padding: 48px 37px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 12px;
+        font-weight: 800;
+        border-radius: 25px
+      }
+
+      .btn-container{
+        width: 662px;
+        background-color: #607d8b30;
+        margin: auto;
+        padding: 120px;
+        margin-top: 12px;
+        border: 1px solid #CDDC39;
+        position: relative;
+      }
+      .divcatagorylink{
+        position: absolute;
+    top: 0;
+    right: 0;
+    margin: 27px;
+
+      }
+        .catagorylink{
+          text-decoration: none;
+    padding: 11px;
+    background-color: #8BC34A;
+    margin: 10px;
+    color: white;
+    border: 1px solid #FFC107;
+
+        }
+
+    
+
+@media screen and (max-width: 800px) {
+      .btn-container{
+         width: 300px;
+         padding: 40px;
+         margin-top: 5px;
+        background-color:#85b4fc;
+      }
+         .button{
+          padding: 30px 40px;
+          margin: 2px;
+          background-color: #1075d4;
+          font-size: 12px;
+         }
+         .divcatagorylink{
+            margin: 12px;
+          }
+           .catagorylink{
+             padding: 7px;
+             margin: 7px;
+
+          }
+      }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="btn-container">
+            <button class="button"onclick="document.getElementById('id01').style.display='block'" style="width:auto;">class-1</button>
+            <button class="button"onclick="document.getElementById('id02').style.display='block'" style="width:auto;">class-2</button>
+            <button class="button"onclick="document.getElementById('id03').style.display='block'" style="width:auto;">class-3</button>
+            <button class="button"onclick="document.getElementById('id04').style.display='block'" style="width:auto;">class-4</button>
+            <button class="button"onclick="document.getElementById('id05').style.display='block'" style="width:auto;">class-5</button>
+            <button class="button"onclick="document.getElementById('id06').style.display='block'" style="width:auto;">class-6</button>
+            <button class="button"onclick="document.getElementById('id07').style.display='block'" style="width:auto;">class-7</button>
+            <button class="button"onclick="document.getElementById('id08').style.display='block'" style="width:auto;">class-8</button>
+            <div class="divcatagorylink">
+              <a class="catagorylink" href="catagory.php">Catagory</a>
+              <a class="catagorylink" href="view_account_info.php">Accounts</a>
+              <a class="catagorylink" href="localview.php">Local</a>
+            </div>
+          </div>
+    </section>
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <div class="modal-content">
+            <div class="container">
+              <div id="btn">
+                <button class="smallbutton">class-1</button>
+                <button class="smallbutton">50</button>
+              </div>
+             <br>
+              <div id="imgbox">
+                <img src="images/car.jpg" alt="Car">
+              </div>
+              <div>
+                <form action="local.php" method="post">
+                  <select name="class">
+                    <option>class-1</option>
+                    <option>class-2</option>
+                    <option>class-3</option>
+                    <option>class-4</option>
+                    <option>class-5</option>
+                    <option>class-6</option>
+                    <option>class-7</option>
+                    <option>class-8</option>
+                  </select>
+                  <input type="text" name="amount" placeholder="Amount">
+                  <input type="date" name="date" placeholder="Date">
+                  <input type="submit" value="Submit">
+
+                </form>
+              </div>
+              <div id="linkdiv">
+              <a class="link" href="searchreceipt.php">Receipt</a>
+              <a class="link" href="account.html">Account</a>
+
+              </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="id02" class="modal">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <div class="modal-content">
+          <div class="container">
+            <div id="btn">
+              <button class="smallbutton">class-2</button>
+              <button class="smallbutton">70</button>
+            </div>
+           <br>
+            <div id="imgbox">
+              <img src="images/smallbus.jpg" alt="smallbus">
+            </div>
+            <div>
+              <form action="local.php" method="post">
+                <select name="class">
+                  <option>class-1</option>
+                  <option>class-2</option>
+                  <option>class-3</option>
+                  <option>class-4</option>
+                  <option>class-5</option>
+                  <option>class-6</option>
+                  <option>class-7</option>
+                  <option>class-8</option>
+                </select>
+                <input type="text" name="amount" placeholder="Amount">
+                <input type="date" name="date" placeholder="Date">
+                <input type="submit" value="Submit">
+
+              </form>
+            </div>
+            <div id="linkdiv">
+            <a class="link" href="searchreceipt.php">Receipt</a>
+            <a class="link" href="account.html">Account</a>
+           </div>
+
+          </div>
+
+      </div>
+  </div>
+
+
+
+  <div id="id03" class="modal">
+    <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <div class="modal-content">
+        <div class="container">
+          <div id="btn">
+            <button class="smallbutton">class-3</button>
+            <button class="smallbutton">100</button>
+          </div>
+         <br>
+          <div id="imgbox">
+            <img src="images/ena.jpg" alt="largebus">
+          </div>
+          <div>
+            <form action="local.php" method="post">
+              <select name="class">
+                <option>class-1</option>
+                <option>class-2</option>
+                <option>class-3</option>
+                <option>class-4</option>
+                <option>class-5</option>
+                <option>class-6</option>
+                <option>class-7</option>
+                <option>class-8</option>
+              </select>
+              <input type="text" name="amount" placeholder="Amount">
+              <input type="date" name="date" placeholder="Date">
+              <input type="submit" value="Submit">
+
+            </form>
+          </div>
+          <div id="linkdiv">
+          <a class="link" href="searchreceipt.php">Receipt</a>
+          <a class="link" href="account.html">Account</a>
+
+          </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div id="id04" class="modal">
+  <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <div class="modal-content">
+      <div class="container">
+        <div id="btn">
+          <button class="smallbutton">class-4</button>
+          <button class="smallbutton">120</button>
+        </div>
+       <br>
+        <div id="imgbox">
+          <img src="images/st.png" alt="smalltruck">
+        </div>
+        <div>
+          <form action="local.php" method="post">
+            <select name="class">
+              <option>class-1</option>
+              <option>class-2</option>
+              <option>class-3</option>
+              <option>class-4</option>
+              <option>class-5</option>
+              <option>class-6</option>
+              <option>class-7</option>
+              <option>class-8</option>
+            </select>
+            <input type="text" name="amount" placeholder="Amount">
+            <input type="date" name="date" placeholder="Date">
+            <input type="submit" value="Submit">
+
+          </form>
+        </div>
+        <div id="linkdiv">
+        <a class="link" href="searchreceipt.php">Receipt</a>
+        <a class="link" href="account.html">Account</a>
+
+        </div>
+
+      </div>
+
+  </div>
+</div>
+
+
+
+<div id="id05" class="modal">
+  <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <div class="modal-content">
+      <div class="container">
+        <div id="btn">
+          <button class="smallbutton">class-5</button>
+          <button class="smallbutton">150</button>
+        </div>
+       <br>
+        <div id="imgbox">
+          <img src="images/medium.jpg" alt="mediumtruck">
+        </div>
+        <div>
+          <form action="local.php" method="post">
+            <select name="class">
+              <option>class-1</option>
+              <option>class-2</option>
+              <option>class-3</option>
+              <option>class-4</option>
+              <option>class-5</option>
+              <option>class-6</option>
+              <option>class-7</option>
+              <option>class-8</option>
+            </select>
+            <input type="text" name="amount" placeholder="Amount">
+            <input type="date" name="date" placeholder="Date">
+            <input type="submit" value="Submit">
+
+          </form>
+        </div>
+        <div id="linkdiv">
+        <a class="link" href="searchreceipt.php">Receipt</a>
+        <a class="link" href="account.html">Account</a>
+
+        </div>
+
+      </div>
+
+  </div>
+</div>
+
+
+<div id="id06" class="modal">
+  <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <div class="modal-content">
+      <div class="container">
+        <div id="btn">
+          <button class="smallbutton">class-6</button>
+          <button class="smallbutton">170</button>
+        </div>
+       <br>
+        <div id="imgbox">
+          <img src="images/lt.jpg" alt="largetruck">
+        </div>
+        <div>
+          <form action="local.php" method="post">
+            <select name="class">
+              <option>class-1</option>
+              <option>class-2</option>
+              <option>class-3</option>
+              <option>class-4</option>
+              <option>class-5</option>
+              <option>class-6</option>
+              <option>class-7</option>
+              <option>class-8</option>
+            </select>
+            <input type="text" name="amount" placeholder="Amount">
+            <input type="date" name="date" placeholder="Date">
+            <input type="submit" value="Submit">
+
+          </form>
+        </div>
+        <div id="linkdiv">
+        <a class="link" href="searchreceipt.php">Receipt</a>
+        <a class="link" href="account.html">Account</a>
+
+        </div>
+
+      </div>
+
+  </div>
+</div>
+
+<div id="id07" class="modal">
+  <span onclick="document.getElementById('id07').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <div class="modal-content">
+      <div class="container">
+        <div id="btn">
+          <button class="smallbutton">class-7</button>
+          <button class="smallbutton">200</button>
+        </div>
+       <br>
+        <div id="imgbox">
+          <img src="images/trailers.jpg" alt="trailers">
+        </div>
+        <div>
+          <form action="local.php" method="post">
+            <select name="class">
+              <option>class-1</option>
+              <option>class-2</option>
+              <option>class-3</option>
+              <option>class-4</option>
+              <option>class-5</option>
+              <option>class-6</option>
+              <option>class-7</option>
+              <option>class-8</option>
+            </select>
+            <input type="text" name="amount" placeholder="Amount">
+            <input type="date" name="date" placeholder="Date">
+            <input type="submit" value="Submit">
+
+          </form>
+        </div>
+        <div id="linkdiv">
+        <a class="link" href="searchreceipt.php">Receipt</a>
+        <a class="link" href="account.html">Account</a>
+
+        </div>
+
+      </div>
+
+  </div>
+</div>
+
+<div id="id08" class="modal">
+  <span onclick="document.getElementById('id08').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <div class="modal-content">
+      <div class="container">
+        <div id="btn">
+          <button class="smallbutton">class-8</button>
+          <button class="smallbutton">80</button>
+        </div>
+       <br>
+        <div id="imgbox">
+          <img src="images/taxi.jpg" alt="taxi">
+        </div>
+        <div>
+          <form action="local.php" method="post">
+            <select name="class">
+              <option>class-1</option>
+              <option>class-2</option>
+              <option>class-3</option>
+              <option>class-4</option>
+              <option>class-5</option>
+              <option>class-6</option>
+              <option>class-7</option>
+              <option>class-8</option>
+            </select>
+            <input type="text" name="amount" placeholder="Amount">
+            <input type="date" name="date" placeholder="Date">
+            <input type="submit" value="Submit">
+
+          </form>
+        </div>
+        <div id="linkdiv">
+        <a class="link" href="searchreceipt.php">Receipt</a>
+        <a class="link" href="account.html">Account</a>
+
+        </div>
+
+      </div>
+
+  </div>
+</div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+
+        <script>
+          // Get the modal
+          var modal = document.getElementById('id02');
+          
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+          </script>
+          
+          <script>
+            // Get the modal
+            var modal = document.getElementById('id03');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById('id04');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById('id05');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById('id06');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+  <script>
+    // Get the modal
+    var modal = document.getElementById('id07');
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+
+
+<script>
+  // Get the modal
+  var modal = document.getElementById('id08');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+
+
+
+</body>
+</html>
