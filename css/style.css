@@ -34,17 +34,17 @@ body nav li a i {
   margin: -10px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (max-width: 900px) {
   body nav li {
     padding: 15px;
     font-size: small;
   }
   body nav a i {
     width: 40%;
-    color: #090d0e;
     padding: 15px;
     font-size: medium;
     margin: -5px;
+    color: #090d0e;
   }
 }
 
